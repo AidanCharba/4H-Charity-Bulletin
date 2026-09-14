@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4-H Community Service Board</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="wrap"><div><span class="eyebrow">4-H PRESIDENT CAMPAIGN</span><h1>Community Service Board</h1><p>Service opportunities around Robstown & Nueces County.</p></div><button id="operatorBtn" class="gold">Operator</button></div></header>
+<main class="wrap">
+<section id="noticeArea"></section>
+<section class="hero"><div><span class="eyebrow">SERVE YOUR COMMUNITY</span><h2>Find a way to help.</h2><p>Join projects such as beach cleanups, lawn care, meal donations, and helping families at the Ronald McDonald House.</p></div><div class="stat"><b id="eventCount">0</b><span>Upcoming Projects</span></div></section>
+<div class="section-title"><h2>Upcoming Service Projects</h2></div>
+<section id="events" class="grid"><p>Loading...</p></section>
+
+<section id="admin" class="hidden admin">
+  <div class="section-title"><h2>Operator Panel</h2></div>
+  <div class="admin-grid">
+    <form id="eventForm" class="card"><h3>Post Event</h3><input id="name" placeholder="Event name" required><textarea id="description" placeholder="Description" required></textarea><input id="place" placeholder="Place" required><input id="date" type="datetime-local" required><input id="capacity" type="number" min="1" placeholder="Capacity (optional)"><button>Post Event</button><p id="eventMsg"></p></form>
+    <form id="noticeForm" class="card"><h3>Post Notification</h3><input id="noticeTitle" placeholder="Title" required><textarea id="noticeBody" placeholder="Message" required></textarea><button>Post Notification</button><p id="noticeMsg"></p></form>
+  </div>
+  <div class="card"><h3>Manage Events</h3><div id="adminEvents">Loading...</div></div>
+  <div class="card"><h3>Manage Notifications</h3><div id="adminNotices">Loading...</div></div>
+  <div class="card"><h3>Operator Signups</h3><div id="signups">Loading...</div></div>
+</section>
+</main>
+
+<div id="signupModal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closeModal()">×</button><h2 id="signupTitle"></h2><p id="signupDetails"></p><form id="signupForm"><input id="parent" placeholder="Parent / guardian name" required><input id="child" placeholder="Child / participant name" required><input id="email" type="email" placeholder="Email" required><input id="phone" placeholder="Phone (optional)"><label class="check"><input id="permission" type="checkbox" required> I am the parent/guardian or authorized adult.</label><div class="privacy-box"><strong>Privacy Notice</strong><p>We collect the information you provide, including parent/guardian name, participant name, email address, and optional phone number, to organize and communicate about this community-service event. It is stored in a private administrative spreadsheet and is not displayed publicly.</p><p>By submitting this form, you acknowledge that you have read and understand this notice.</p></div><label class="check"><input id="privacyConsent" type="checkbox" required> I understand how my information will be stored and used.</label><button>Confirm Sign-Up</button><p id="signupMsg"></p><div id="confirmationCode" class="confirmation hidden"><strong>Save this confirmation code:</strong><span id="confirmationCodeValue"></span><small>You will need this code and the same email address if you later want to cancel your signup.</small></div></form></div></div>
+
+<div id="cancelModal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closeCancel()">×</button><h2 id="cancelTitle">Cancel Signup</h2><p>Enter the confirmation code you received and the same email address used for the signup.</p><form id="cancelForm"><input id="cancelCode" placeholder="Confirmation code" required><input id="cancelEmail" type="email" placeholder="Email used for signup" required><button class="danger">Cancel Signup</button><p id="cancelMsg"></p></form></div></div>
+
+<div id="privacyModal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closePrivacy()">×</button><h2>Privacy Notice</h2><p>This community-service board collects information that parents or authorized adults voluntarily provide when signing up for an event.</p><h3>What we collect</h3><ul><li>Parent/guardian name</li><li>Child/participant name</li><li>Email address</li><li>Optional phone number</li></ul><h3>Why we collect it</h3><p>The information is used to organize service projects, maintain attendance records, and communicate about the event.</p><h3>Who can see it</h3><p>Participant details are kept in a private administrative Google Sheet and are not displayed on the public event board. Public visitors only see the number of confirmed participants.</p><h3>Changes and cancellation</h3><p>Participants can use their confirmation code and signup email to cancel an active signup.</p><p>If you have questions about information submitted through this board, contact the person operating the community-service program.</p></div></div>
+
+<div id="operatorModal" class="modal hidden"><div class="modal-card"><button class="x" onclick="closeOperator()">×</button><h2>Operator Login</h2><p>Enter the operator key you configured in Apps Script.</p><form id="operatorForm"><input id="operatorKey" type="password" required placeholder="Operator key"><button>Enter</button><p id="operatorMsg"></p></form></div></div>
+<footer><div class="wrap">Nueces County • Robstown • Community Service · <button id="privacyLink" class="footer-link">Privacy Notice</button></div></footer><script src="app.js"></script></body></html>
