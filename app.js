@@ -1,5 +1,5 @@
 // Paste your deployed Google Apps Script Web App URL here.
-const API_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const API_URL = "https://script.google.com/macros/s/AKfycbxVTPpcTEYQbYP_SWQgyWzXtbGykT6DYapf2k5b_d6hM9F-mJq5sehafWT4SRsKYkqvgA/exec";
 let operatorKey = sessionStorage.getItem("operatorKey") || "";
 let events = [];
 const $=id=>document.getElementById(id);
